@@ -1,0 +1,18 @@
+---
+title: "Untitled"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+
+```{r include = FALSE}
+library(ggplot2)
+load("outputs.Rdata")
+```
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+with(input_values, {
+  eval(rlang::parse_expr(code_chunk))
+})
+```
